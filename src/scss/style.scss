@@ -1,0 +1,37 @@
+@use "sass:math";
+
+/** Подключение шрифтов локально из папки "./src/fonts" */
+@import "config/fonts";
+
+/** Подключение переменных */
+@import "config/vars";
+
+/** Подключение sass функций и миксинов и рассширений стилей */
+@import "config/functions";
+@import "config/mixins";
+@import "config/patternSelectors";
+
+/** Обнуление */
+@import "config/reset";
+
+/**
+* Библиотеки
+* раскомментировать для использования
+*/
+// @import 'libs/aos';
+// @import 'libs/swiper';
+
+/** Подлючение кастомного скрола для всего сайта */
+@import "config/scrollbar";
+
+/** Общие параметры, шаблоны(заготовки) и вспомагательные классы */
+@import "config/base";
+
+/** БЕМ блоки используемые во всё проекте */
+@import "config/common";
+
+/** Подключение стилей отдельных блоков и секций */
+@import "components/customLoader";
+@import "components/header";
+@import "components/sendPhoto";
+@import "components/footer";

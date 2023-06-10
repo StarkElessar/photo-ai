@@ -1,0 +1,20 @@
+$maxWidth: 1920; // максимальная ширина страницы
+$minWidth: 320; // минимальная ширина телефона
+$maxWidthContainer: 1200; // ширина контейнера с учетом padding слева и справа
+$containerWidth: 1160; // ширина контейнера из макета
+
+$mainOffset: 15; // отступы безопасности для контейнера
+$main-font-family: 'Inter'; // !указать здесь основное семейство шрифта
+
+$color-default: #282626;
+$color-accent: #A6414B;
+$color-secondary: #6C8A82;
+$color-white: #fff;
+$color-gray-3: #F7F7F7;
+
+$main-radius: 4;
+
+$font-family: $main-font-family, sans-serif; // Семейство шрифта по умолчанию
+$font-weight: 400; // Жирность шрифта по умолчанию
+
+$default-transition: 280ms ease-in-out;

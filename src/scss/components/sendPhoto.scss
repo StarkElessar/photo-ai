@@ -1,0 +1,135 @@
+.send-photo {
+	padding: rem(40) 0;
+}
+
+.form-sending {
+	position: relative;
+	display: flex;
+	gap: rem(20);
+	//overflow: hidden;
+
+	&._error {
+		.message-error {
+			display: block;
+		}
+	}
+
+	&._sending {
+		.loader-container {
+			opacity: 1;
+			visibility: visible;
+			transform: scale(1);
+		}
+	}
+
+	// .form-sending__controls
+	&__controls {
+		display: flex;
+		flex-direction: column;
+		gap: rem(40);
+		flex: 1 1 rem(400);
+
+		label {
+			display: flex;
+			flex-direction: column;
+		}
+
+		.button {
+			margin-top: auto;
+		}
+	}
+
+	// .form-sending__title
+	&__title {
+		font-weight: 700;
+		color: $color-secondary;
+		font-size: rem(20);
+		margin-bottom: rem(15);
+	}
+}
+
+.block-image {
+	display: flex;
+	justify-content: center;
+
+	position: relative;
+	width: rem(500);
+	max-height: rem(550);
+	background-color: $color-gray-3;
+	border: 2px dashed $color-secondary;
+	border-radius: rem($main-radius);
+	overflow: hidden;
+
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+
+	&.selected {
+		border-style: solid;
+
+		&::before {
+			content: "";
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			inset: 0;
+			backdrop-filter: blur(3px);
+		}
+
+		.block-image__image {
+			display: block;
+			box-shadow: 0 0 rem(10) rgba(#000, 10%);
+		}
+
+		.block-image__choose {
+			opacity: 0;
+		}
+	}
+
+	// .block-image__choose
+	&__choose {
+		position: absolute;
+		inset: 0;
+		z-index: 3;
+
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		cursor: pointer;
+	}
+
+	input {
+		display: none;
+	}
+
+	span {
+		max-width: rem(300);
+		text-align: center;
+		color: $color-secondary;
+		line-height: 1.2;
+	}
+
+	// .block-image__image
+	&__image {
+		position: relative;
+		display: none;
+		object-fit: contain;
+		max-width: 100%;
+		height: 100%;
+	}
+}
+
+.form-select {
+	width: 100%;
+	height: rem(40);
+
+	font-size: rem(16);
+	border-radius: rem($main-radius);
+	border: 1px solid $color-secondary;
+	cursor: pointer;
+
+	// .form-select__button
+	&__button {
+		padding: rem(8) rem(12);
+	}
+}

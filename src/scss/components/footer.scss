@@ -1,0 +1,25 @@
+.footer {
+  padding: rem(20) 0;
+  background: $color-secondary;
+
+  // .footer__copy
+  &__copy {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @include media-mx(570) {
+      align-items: flex-start;
+    }
+
+    p {
+      color: $color-white;
+      line-height: 1.2;
+
+      &:not(:last-child) {
+        margin-bottom: rem(8);
+      }
+    }
+  }
+}
