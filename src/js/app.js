@@ -38,7 +38,7 @@ const handleFormSending = async (event) => {
       body: data,
     });
 
-    console.log(res);
+    console.log(await res.json());
   } catch (error) {
     console.log(error);
   } finally {
