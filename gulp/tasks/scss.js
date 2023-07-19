@@ -22,7 +22,8 @@ const scss = () => {
       )
       .pipe(sass({ outputStyle: 'expanded' }))
       .pipe(app.plugins.replace(/@img\//g, '../images/'))
-      .pipe(app.plugins.if(app.isBuild, groupCssMediaQueries()))
+      // .pipe(app.plugins.if(app.isBuild, groupCssMediaQueries()))
+      .pipe(groupCssMediaQueries())
       .pipe(
         app.plugins.if(
           app.isBuild,

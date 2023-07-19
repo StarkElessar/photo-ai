@@ -12,7 +12,8 @@ const paths = {
 };
 
 export const webpackConfig = (isMode) => ({
-  entry: ['@babel/polyfill', `${paths.src}/js/app.js`],
+  entry: `${paths.src}/js/app.js`,
+  // entry: ['@babel/polyfill', `${paths.src}/js/app.js`],
   mode: isMode ? 'development' : 'production',
   cache: {
     type: 'filesystem', // По умолчанию 'memory'
@@ -24,20 +25,26 @@ export const webpackConfig = (isMode) => ({
     publicPath: '/',
   },
   module: {
-    rules: [
-      {
-        test: /\.m?js$/,
-        exclude: /node_modules/,
-        use: {
-          loader: 'babel-loader',
-          options: {
-            presets: ['@babel/preset-env'],
-          },
-        },
-        resolve: {
-          fullySpecified: false,
-        },
-      },
-    ],
+    // rules: [
+    //   {
+    //     test: /\.m?js$/,
+    //     exclude: /node_modules/,
+    //     use: {
+    //       loader: 'babel-loader',
+    //       options: {
+    //         presets: ['@babel/preset-env'],
+    //       },
+    //     },
+    //     resolve: {
+    //       fullySpecified: false,
+    //     },
+    //   },
+    // ],
   },
 });
+
+
+
+const isMode = {
+
+}

@@ -21,6 +21,10 @@ body {
   max-width: rem($containerWidth + $mainOffset * 2);
   margin: 0 auto;
   padding: 0 rem($mainOffset);
+
+  @include media-mx(375) {
+    padding: 0 rem(10);
+  }
 }
 
 // Стили отзывчивых картинок (IBG) ============================================

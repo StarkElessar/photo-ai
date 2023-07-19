@@ -9,10 +9,6 @@
     flex-direction: column;
     align-items: center;
 
-    @include media-mx(570) {
-      align-items: flex-start;
-    }
-
     p {
       color: $color-white;
       line-height: 1.2;
